@@ -1,0 +1,92 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 350px;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 0 20px 25px;
+  min-height: 407px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  &__image {
+    display: block;
+    margin: auto;
+  }
+
+  &__description {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    position: relative;
+  }
+
+  &__name {
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  &__rate {
+    max-height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    color: #838383;
+    align-self: end;
+  }
+
+  &__rate:before {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    content: '';
+    display: block;
+    background-image: url('../../assets/star.svg');
+  }
+
+  &__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__price {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ffa542;
+  }
+
+  &__old-price {
+    position: absolute;
+    top: 20px;
+    right: 6px;
+    text-decoration: line-through;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #ffce7f;
+  }
+
+  &__button-buy {
+    justify-self: end;
+    padding: 0;
+    background: none;
+    border: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    cursor: pointer;
+  }
+}
