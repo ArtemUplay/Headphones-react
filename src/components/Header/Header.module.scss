@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1135px;
+  height: 62px;
+
+  &__logo {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #101010;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+  }
+
+  &__counter {
+    display: block;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: #ffa542;
+    text-align: center;
+    color: #fff;
+    width: 18px;
+    position: absolute;
+    top: 12px;
+    left: 35px;
+  }
+}
