@@ -14,8 +14,10 @@ const Card = ({ title, image, price, oldPrice, rate }) => {
       <div className={styles.card__description}>
         <h3 className={styles.card__name}>{title}</h3>
         <div className={styles['card__price-wrapper']}>
-          <span className={styles.card__price}>{price}</span>
-          <span className={styles['card__old-price']}>{oldPrice}</span>
+          <span className={styles.card__price}>{price} ₽</span>
+          <span className={styles['card__old-price']}>
+            {oldPrice ? oldPrice + ' ₽' : ''}
+          </span>
         </div>
         <span className={styles.card__rate}>{rate}</span>
         <button
