@@ -1,0 +1,104 @@
+.cart {
+  &__item {
+    min-width: 633px;
+    box-sizing: border-box;
+    padding: 18px;
+    padding-right: 28px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: flex;
+    margin: 0px 0px 15px 0px;
+    justify-content: space-between;
+  }
+
+  &__columns-wrapper {
+    display: flex;
+  }
+
+  &__image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item-image {
+    width: 146px;
+    height: 136px;
+  }
+
+  &__buttons {
+    margin: 17px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+  }
+
+  &__button {
+    background: #ffce7f;
+    height: 30px;
+    border-radius: 50%;
+    width: 35px;
+    border: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  &__button-increase {
+    background-image: url('../../assets/Plus.svg');
+  }
+
+  &__button-deacrease {
+    background-image: url('../../assets/Minus.svg');
+  }
+
+  &__column-info {
+    margin: 76px 0px 0px 24px;
+  }
+
+  &__item-name {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+    color: #1c1c27;
+    margin: 0px 0px 12px 0px;
+  }
+
+  &__item-price {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #aaaaaa;
+  }
+
+  &__column-total-price {
+    // margin-left: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item-delete-button {
+    align-self: flex-end;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 17px;
+    background-image: url('../../assets/Trash.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__item-total-price {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1c1c27;
+  }
+}
