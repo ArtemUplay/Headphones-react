@@ -1,12 +1,11 @@
 import styles from './CartItems.module.scss';
 
 import { removeItemFromCart, increaseAmountItem, decreaseAmountItem } from '../../redux/cart/cartSlice';
-import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
-  const [totalItemPrice, setTotalItemPrice] = useState(item.price);
+  const totalPrice = item.price * item.amount;
 
   const handleRemoveItem = () => {
     dispatch(removeItemFromCart(item));
@@ -14,12 +13,12 @@ const CartItem = ({ item }) => {
 
   const handleIncreaseAmountItem = () => {
     dispatch(increaseAmountItem(item));
-    setTotalItemPrice(totalItemPrice + item.price);
+    // setTotalItemPrice(totalItemPrice + item.price);
   };
 
   const handleDecreaseAmountItem = () => {
     dispatch(decreaseAmountItem(item));
-    setTotalItemPrice(totalItemPrice - item.price);
+    // setTotalItemPrice(totalItemPrice - item.price);
   };
 
   return (
@@ -51,7 +50,7 @@ const CartItem = ({ item }) => {
           className={styles['cart__item-delete-button']}
           aria-label="Удалить товар из корзины"
           onClick={handleRemoveItem}></button>
-        <span className={styles['cart__item-total-price']}>{totalItemPrice} ₽</span>
+        <span className={styles['cart__item-total-price']}>{totalPrice} ₽</span>
       </div>
     </li>
   );
