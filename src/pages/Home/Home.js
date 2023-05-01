@@ -26,7 +26,7 @@ const Home = () => {
             <h2 className={styles.headphones__title}>Наушники</h2>
             <ul className={styles.headphones__list}>
               {headphonesArray.map((item) => {
-                if (item.isWireless) {
+                if (!item.isWireless) {
                   return (
                     <ProductCard
                       key={item.id}
@@ -48,7 +48,7 @@ const Home = () => {
             <h2 className={styles.headphones__title}>Беспроводные наушники</h2>
             <ul className={styles.headphones__list}>
               {headphonesArray.map((item) => {
-                if (!item.isWireless) {
+                if (item.isWireless) {
                   return (
                     <ProductCard
                       key={uuidv4()}

@@ -1,7 +1,7 @@
 import styles from './CartItems.module.scss';
 
 import { removeItemFromCart, increaseAmountItem, decreaseAmountItem } from '../../redux/cart/cartSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -13,12 +13,10 @@ const CartItem = ({ item }) => {
 
   const handleIncreaseAmountItem = () => {
     dispatch(increaseAmountItem(item));
-    // setTotalItemPrice(totalItemPrice + item.price);
   };
 
   const handleDecreaseAmountItem = () => {
     dispatch(decreaseAmountItem(item));
-    // setTotalItemPrice(totalItemPrice - item.price);
   };
 
   return (
