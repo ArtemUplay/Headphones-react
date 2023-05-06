@@ -27,11 +27,9 @@ const ProductCard = ({ title, image, price, oldPrice, rate, id }) => {
           <span className={styles['card__old-price']}>{oldPrice ? oldPrice + ' ₽' : ''}</span>
         </div>
         <span className={styles.card__rate}>{rate}</span>
-        <Link to="/cart" className={styles.card__link}>
-          <button type="button" aria-label="Купить" className={styles['card__button-buy']} onClick={handleAddToCart}>
-            Купить
-          </button>
-        </Link>
+        <button type="button" aria-label="Купить" className={styles['card__button-buy']} onClick={handleAddToCart}>
+          Купить
+        </button>
       </div>
     </li>
   );

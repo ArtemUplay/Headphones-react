@@ -5,9 +5,14 @@ import styles from './Header.module.scss';
 import favotiresIcon from '../../assets/heart.svg';
 import cartIcon from '../../assets/cart.svg';
 import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 
 const Header = () => {
-  const counterCart = useSelector((store) => store.cart.cartItems.length);
+  const { cartItems } = useSelector((store) => store.cart);
+
+  const totalItems = useMemo(() => {
+    return cartItems.reduce((total, item) => total + item.amount, 0);
+  }, [cartItems]);
 
   return (
     <header className={styles.header}>
@@ -26,7 +31,7 @@ const Header = () => {
         </li>
         <li className={styles.header__item}>
           <Link to="/cart" className={styles.header__link}>
-            <span className={`${styles.header__counter} ${styles['header__count-cart']}`}>{counterCart}</span>
+            <span className={`${styles.header__counter} ${styles['header__count-cart']}`}>{totalItems}</span>
             <img className={styles.header__icon} src={cartIcon} alt="Корзина" />
           </Link>
         </li>
