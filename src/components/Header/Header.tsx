@@ -1,14 +1,23 @@
-import { useSelector } from 'react-redux';
-
 import styles from './Header.module.scss';
 
 import favotiresIcon from '../../assets/heart.svg';
 import cartIcon from '../../assets/cart.svg';
 import { Link } from 'react-router-dom';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
+import { useAppSelector } from 'src/types';
 
 const Header = () => {
-  const { cartItems } = useSelector((store) => store.cart);
+  const { cartItems } = useAppSelector((store) => store.cart);
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      const items = JSON.stringify(cartItems);
+      localStorage.setItem('cartItems', items);
+    }
+
+    isMounted.current = true;
+  }, [cartItems]);
 
   const totalItems = useMemo(() => {
     return cartItems.reduce((total, item) => total + item.amount, 0);
@@ -23,11 +32,10 @@ const Header = () => {
       </h1>
       <ul className={styles.header__menu}>
         <li className={styles.header__item}>
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-          <a className={styles.header__link} href="#">
+          <button className={styles.header__link}>
             <span className={`${styles.header__counter} ${styles['header__count-favorites']}`}>2</span>
             <img className={styles.header__icon} src={favotiresIcon} alt="Избранное" />
-          </a>
+          </button>
         </li>
         <li className={styles.header__item}>
           <Link to="/cart" className={styles.header__link}>

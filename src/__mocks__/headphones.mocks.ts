@@ -4,11 +4,12 @@ import AppleEarPods from '../assets/Apple EarPods.png';
 import AppleEarPodsPacked from '../assets/Apple EarPods(packed).png';
 import Gerlax from '../assets/GERLAX GH-04.png';
 import BOROFONE from '../assets/BOROFONE BO4.png';
+import { IProductCartItem } from 'components/ProductCard/ProductCard.types';
 
-export const headphonesArray = [
+export const headphonesArray: IProductCartItem[] = [
   {
     id: '643d69a5c3f7b9001cfa093c',
-    img: AppleBYZ,
+    image: AppleBYZ,
     title: 'Apple BYZ S852I',
     price: 2927,
     oldPrice: 3527,
@@ -17,7 +18,7 @@ export const headphonesArray = [
   },
   {
     id: '643d69a5c3f7b9001cfa0941',
-    img: AppleEarPods,
+    image: AppleEarPods,
     title: 'Apple EarPods',
     price: 2327,
     oldPrice: null,
@@ -26,7 +27,7 @@ export const headphonesArray = [
   },
   {
     id: '643d69a5c3f7b9001cfa093e',
-    img: AppleEarPodsPacked,
+    image: AppleEarPodsPacked,
     title: 'Apple EarPods',
     price: 2327,
     oldPrice: null,
@@ -35,7 +36,7 @@ export const headphonesArray = [
   },
   {
     id: '643d69a5c3f7b9001cfa0942',
-    img: AppleAirpods,
+    image: AppleAirpods,
     title: 'Apple EarPods',
     price: 9527,
     oldPrice: null,
@@ -44,7 +45,7 @@ export const headphonesArray = [
   },
   {
     id: '643d69a5c3f7b9001cfa0943',
-    img: Gerlax,
+    image: Gerlax,
     title: 'GERLAX GH-04',
     price: 6527,
     oldPrice: null,
@@ -53,7 +54,7 @@ export const headphonesArray = [
   },
   {
     id: '643d69a5c3f7b9001cfa093f',
-    img: BOROFONE,
+    image: BOROFONE,
     title: 'BOROFONE BO4',
     price: 7527,
     oldPrice: null,

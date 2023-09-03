@@ -3,7 +3,9 @@ import styles from './CartItems.module.scss';
 import { removeItemFromCart, increaseAmountItem, decreaseAmountItem } from '../../redux/cart/cartSlice';
 import { useDispatch } from 'react-redux';
 
-const CartItem = ({ item }) => {
+import { ICartItem } from 'src/redux/cart/cartSlice.types';
+
+const CartItem = ({ item }: { item: ICartItem }) => {
   const dispatch = useDispatch();
   const totalPrice = item.price * item.amount;
 

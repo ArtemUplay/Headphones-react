@@ -6,6 +6,14 @@
   justify-content: center;
   grid-auto-rows: repeat(2, 1fr);
   gap: 30px;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: repeat(2, minmax(min-content, 350px));
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-template-columns: repeat(1, minmax(min-content, 350px));
+  }
 }
 
 .headphones__title {

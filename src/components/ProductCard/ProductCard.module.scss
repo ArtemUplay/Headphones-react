@@ -30,6 +30,10 @@
     font-weight: 600;
     font-size: 17px;
     line-height: 21px;
+
+    @media screen and (max-width: 650px) {
+      font-size: 15px;
+    }
   }
 
   &__rate {
@@ -39,8 +43,13 @@
     font-size: 17px;
     line-height: 21px;
     display: flex;
+    align-items: center;
     color: #838383;
     align-self: end;
+
+    @media screen and (max-width: 650px) {
+      font-size: 15px;
+    }
   }
 
   &__rate:before {
