@@ -32,7 +32,7 @@ const Home = () => {
                       key={item.id}
                       id={item.id}
                       title={item.title}
-                      image={item.img}
+                      image={item.image}
                       price={item.price}
                       oldPrice={item.oldPrice}
                       rate={item.rate}
@@ -54,7 +54,7 @@ const Home = () => {
                       key={uuidv4()}
                       id={uuidv4()}
                       title={item.title}
-                      image={item.img}
+                      image={item.image}
                       price={item.price}
                       oldPrice={item.oldPrice}
                       rate={item.rate}
