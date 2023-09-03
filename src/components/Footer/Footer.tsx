@@ -8,28 +8,16 @@ import WhatsApp from '../../assets/Whatsapp.svg';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles['footer__column-logo']}>
-        <span className={`${styles.footer__logo} ${styles.logo}`}>
-          <a className={styles.logo__link} href="#">
-            QPICK
-          </a>
-        </span>
+      <div className={`${styles.footer__logo} ${styles.logo}`}>
+        <button className={styles.logo__link}>QPICK</button>
       </div>
       <div className={styles.footer__links}>
-        <a className={styles.footer__link} href="#">
-          Избранное
-        </a>
-        <a className={styles.footer__link} href="#">
-          Корзина
-        </a>
-        <a className={styles.footer__link} href="#">
-          Контакты
-        </a>
+        <button className={styles.footer__link}>Избранное</button>
+        <button className={styles.footer__link}>Корзина</button>
+        <button className={styles.footer__link}>Контакты</button>
       </div>
       <div className={styles['footer__column-terms']}>
-        <a className={styles['footer__link-terms']} href="#">
-          Условия сервиса
-        </a>
+        <button className={styles['footer__link-terms']}>Условия сервиса</button>
         <div className={styles.footer__languages}>
           <img src={Planet} alt="Переключение языков" />
           <button
@@ -43,15 +31,15 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles['footer__column-messengers']}>
-        <a href="#">
+        <button className={styles['footer__column-messengers-button']}>
           <img src={Vk} alt="Вконтакте" />
-        </a>
-        <a href="#">
+        </button>
+        <button className={styles['footer__column-messengers-button']}>
           <img src={Telegram} alt="Телеграмм" />
-        </a>
-        <a href="#">
+        </button>
+        <button className={styles['footer__column-messengers-button']}>
           <img src={WhatsApp} alt="Вотсап" />
-        </a>
+        </button>
       </div>
     </footer>
   );

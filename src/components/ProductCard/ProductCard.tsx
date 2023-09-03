@@ -2,16 +2,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart, increaseAmountItem } from '../../redux/cart/cartSlice';
 
 import styles from './ProductCard.module.scss';
-import { Link } from 'react-router-dom';
 
-const ProductCard = ({ title, image, price, oldPrice, rate, id }) => {
+import { FC } from 'react';
+import { IProductCardProps } from './ProductCard.types';
+import { useAppSelector } from 'src/types';
+import { ICartItem } from 'src/redux/cart/cartSlice.types';
+
+const ProductCard = ({ title, image, price, oldPrice, rate, id }: IProductCardProps) => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((store) => store.cart.cartItems);
+  const cartItems = useAppSelector((store) => store.cart.cartItems);
 
   const handleAddToCart = () => {
     const item = cartItems.find((item) => item.id === id);
     if (item) {
-      dispatch(increaseAmountItem({ title, image, price, oldPrice, rate, id }));
+      dispatch(increaseAmountItem({ title, image, price, oldPrice, rate, id } as ICartItem));
     } else {
       return dispatch(addItemToCart({ title, image, price, oldPrice, rate, id, amount: 1 }));
     }

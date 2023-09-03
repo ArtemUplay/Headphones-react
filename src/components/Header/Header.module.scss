@@ -1,13 +1,12 @@
 .header {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1110px;
+  max-width: 1140px;
   height: 62px;
-
-  &__logo {
-  }
+  padding: 0 15px;
 
   &__menu {
     display: flex;
@@ -26,6 +25,9 @@
   &__link {
     display: block;
     text-decoration: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
   }
 
   &__counter {
@@ -42,14 +44,11 @@
     top: 12px;
     left: 35px;
   }
-
-  &__count-favorites {
-  }
-  &__count-cart {
-  }
 }
 
 .logo {
+  border: 0;
+  background-color: transparent;
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;

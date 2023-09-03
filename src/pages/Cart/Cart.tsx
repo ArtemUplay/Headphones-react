@@ -1,9 +1,9 @@
-import { useSelector } from 'react-redux';
 import styles from './Cart.module.scss';
 import { useEffect, useMemo, useState } from 'react';
 import CartItem from '../../components/CartItem/CartItem';
 import { loadPage } from '../../utils/utils';
 import Loader from 'react-js-loader';
+import { useAppSelector } from 'src/types';
 
 const Cart = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,7 +12,7 @@ const Cart = () => {
     loadPage(setIsLoading);
   }, []);
 
-  const cartItems = useSelector((store) => store.cart.cartItems);
+  const cartItems = useAppSelector((store) => store.cart.cartItems);
   const totalPrice = useMemo(() => {
     return cartItems.reduce((sum, item) => {
       if (item.amount === 1) {
