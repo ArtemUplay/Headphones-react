@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.39f07c70.css",
-    "main.js": "./static/js/main.104cb25d.js",
+    "main.js": "./static/js/main.4cc0e82e.js",
     "static/media/Apple EarPods(packed).png": "./static/media/Apple EarPods(packed).495564a5d18ab791cf85.png",
     "static/media/BOROFONE BO4.png": "./static/media/BOROFONE BO4.d2d7096cec716b9b06a7.png",
     "static/media/GERLAX GH-04.png": "./static/media/GERLAX GH-04.7e43962b02bc9e8c8a2c.png",
@@ -17,10 +17,10 @@
     "static/media/Plus.svg": "./static/media/Plus.ff4b064e5dd4dbda105b.svg",
     "static/media/Minus.svg": "./static/media/Minus.1288fb6f83d8dd9a8dea.svg",
     "main.39f07c70.css.map": "./static/css/main.39f07c70.css.map",
-    "main.104cb25d.js.map": "./static/js/main.104cb25d.js.map"
+    "main.4cc0e82e.js.map": "./static/js/main.4cc0e82e.js.map"
   },
   "entrypoints": [
     "static/css/main.39f07c70.css",
-    "static/js/main.104cb25d.js"
+    "static/js/main.4cc0e82e.js"
   ]
 }
