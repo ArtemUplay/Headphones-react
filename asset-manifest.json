@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "./static/css/main.39f07c70.css",
+    "main.js": "./static/js/main.104cb25d.js",
+    "static/media/Apple EarPods(packed).png": "./static/media/Apple EarPods(packed).495564a5d18ab791cf85.png",
+    "static/media/BOROFONE BO4.png": "./static/media/BOROFONE BO4.d2d7096cec716b9b06a7.png",
+    "static/media/GERLAX GH-04.png": "./static/media/GERLAX GH-04.7e43962b02bc9e8c8a2c.png",
+    "static/media/VK.svg": "./static/media/VK.200332db80feb34aac09a5f6d7d91e63.svg",
+    "static/media/Whatsapp.svg": "./static/media/Whatsapp.8dc15f232a985aef74ed03315e7a3148.svg",
+    "static/media/cart.svg": "./static/media/cart.0755738f949b36eb371956870cd1c963.svg",
+    "static/media/planet.svg": "./static/media/planet.797e781eca4339c28cabcdd5b54c29bb.svg",
+    "static/media/Telegram.svg": "./static/media/Telegram.17041232c86fdbc127e2f87541348769.svg",
+    "static/media/Trash.svg": "./static/media/Trash.c3b466f51641c238a464.svg",
+    "static/media/heart.svg": "./static/media/heart.db29a61480a22e5d68037a0d62ba5325.svg",
+    "index.html": "./index.html",
+    "static/media/star.svg": "./static/media/star.bc044334a82d09622eb6.svg",
+    "static/media/Plus.svg": "./static/media/Plus.ff4b064e5dd4dbda105b.svg",
+    "static/media/Minus.svg": "./static/media/Minus.1288fb6f83d8dd9a8dea.svg",
+    "main.39f07c70.css.map": "./static/css/main.39f07c70.css.map",
+    "main.104cb25d.js.map": "./static/js/main.104cb25d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39f07c70.css",
+    "static/js/main.104cb25d.js"
+  ]
+}
