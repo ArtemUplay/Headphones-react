@@ -13,7 +13,7 @@ const Header = () => {
   useEffect(() => {
     if (isMounted.current) {
       const items = JSON.stringify(cartItems);
-      localStorage.setItem('cartItems', items);
+      sessionStorage.setItem('cartItems', items);
     }
 
     isMounted.current = true;

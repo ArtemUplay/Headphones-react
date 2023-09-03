@@ -19,7 +19,7 @@ export const loadPage = async (setter: (value: boolean) => void) => {
 };
 
 export const getCartItemsFromLocalStorage = (): ICartItem[] => {
-  const items = localStorage.getItem('cartItems');
+  const items = sessionStorage.getItem('cartItems');
 
   if (items) {
     return JSON.parse(items);
